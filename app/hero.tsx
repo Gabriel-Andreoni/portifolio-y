@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 
+import Menu from "./menu";
+import { portfolioPaletteVariables } from "./palette";
+
 type PhotoTileProps = {
   alt: string;
   className: string;
@@ -22,7 +25,7 @@ function PhotoTile({
 }: PhotoTileProps) {
   return (
     <figure
-      className={`group/photo relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-[#211f20] after:pointer-events-none after:absolute after:inset-0 after:z-[1] after:bg-[linear-gradient(to_top,rgba(15,15,15,0.82)_0,rgba(15,15,15,0.08)_36%,transparent_58%)] after:content-[''] ${className}`}
+      className={`group/photo relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-graphite)] after:pointer-events-none after:absolute after:inset-0 after:z-[1] after:bg-[linear-gradient(to_top,color-mix(in_srgb,var(--palette-ink)_82%,transparent)_0,color-mix(in_srgb,var(--palette-ink)_8%,transparent)_36%,transparent_58%)] after:content-[''] ${className}`}
     >
       <Image
         fill
@@ -34,7 +37,7 @@ function PhotoTile({
         style={{ objectPosition: position }}
       />
       <figcaption className="absolute right-[clamp(0.8rem,1.1vw,1.1rem)] bottom-[clamp(0.75rem,1vw,1rem)] left-[clamp(0.8rem,1.1vw,1.1rem)] z-[2] flex items-end justify-between gap-3 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.72vw,0.72rem)] font-semibold tracking-[0.15em] uppercase">
-        <span className="font-[family-name:var(--font-display)] text-[clamp(0.78rem,0.95vw,0.98rem)] font-normal tracking-[0.04em] text-[#fc8800] normal-case">
+        <span className="font-[family-name:var(--font-display)] text-[clamp(0.78rem,0.95vw,0.98rem)] font-normal tracking-[0.04em] text-[var(--palette-orange)] normal-case">
           {term}
         </span>
         <span>{label}</span>
@@ -46,30 +49,33 @@ function PhotoTile({
 export default function Hero() {
   return (
     <section
-      className="isolate flex min-h-svh items-center bg-[#0f0f0f] bg-[radial-gradient(circle_at_8%_8%,rgba(90,0,93,0.28),transparent_24rem)] p-[clamp(0.75rem,1.6vw,1.75rem)] text-white max-lg:block max-sm:p-[0.65rem]"
+      className="relative isolate flex min-h-svh items-center bg-[var(--palette-ink)] bg-[radial-gradient(circle_at_8%_8%,color-mix(in_srgb,var(--palette-purple)_28%,transparent),transparent_24rem)] p-[clamp(0.75rem,1.6vw,1.75rem)] text-[var(--palette-paper)] max-lg:block max-sm:p-[0.65rem]"
       id="inicio"
       aria-labelledby="hero-title"
+      style={portfolioPaletteVariables}
     >
+      <Menu />
+
       <div className="mx-auto grid h-[clamp(40rem,calc(100svh-clamp(1.5rem,3.2vw,3.5rem)),62rem)] w-full grid-cols-12 grid-rows-8 gap-[clamp(0.55rem,0.85vw,0.9rem)] max-lg:h-auto max-lg:min-h-0 max-lg:grid-cols-2 max-lg:grid-rows-none">
-        <div className="relative flex min-w-0 [grid-area:1/1/3/4] items-center justify-center overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-[#5a005d] bg-[linear-gradient(135deg,rgba(252,136,0,0.12),transparent_45%)] max-lg:min-h-44 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]">
+        <div className="relative flex min-w-0 [grid-area:1/1/3/4] items-center justify-center overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-purple)] bg-[linear-gradient(135deg,color-mix(in_srgb,var(--palette-orange)_12%,transparent),transparent_45%)] max-lg:min-h-44 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]">
           <Image
             alt="Símbolo visual do portfólio"
-            className="h-auto w-[min(48%,8.25rem)] drop-shadow-[0_0.5rem_1rem_rgba(15,15,15,0.38)] max-lg:w-26"
+            className="h-auto w-[min(48%,8.25rem)] drop-shadow-[0_0.5rem_1rem_color-mix(in_srgb,var(--palette-ink)_38%,transparent)] max-lg:w-26"
             height={564}
             priority
             src="/logo-y.png"
             width={418}
           />
-          <p className="absolute right-3.5 bottom-3 m-0 text-right font-[family-name:var(--font-utility)] text-[clamp(0.55rem,0.75vw,0.72rem)] leading-[1.2] font-semibold tracking-[0.12em] text-white/70 uppercase">
+          <p className="absolute right-3.5 bottom-3 m-0 text-right font-[family-name:var(--font-utility)] text-[clamp(0.55rem,0.75vw,0.72rem)] leading-[1.2] font-semibold tracking-[0.12em] text-[color-mix(in_srgb,var(--palette-paper)_70%,transparent)] uppercase">
             Fotografia de
             <br />
             cultura japonesa
           </p>
         </div>
 
-        <header className="group/title relative flex min-w-0 [grid-area:1/4/3/8] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-white p-[clamp(1rem,1.5vw,1.5rem)] text-[#0f0f0f] max-lg:min-h-84 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-88">
+        <header className="group/title relative flex min-w-0 [grid-area:1/4/3/8] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-paper)] p-[clamp(1rem,1.5vw,1.5rem)] text-[var(--palette-ink)] max-lg:min-h-84 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-88">
           <span
-            className="absolute -top-[48%] -right-[8%] aspect-square w-[clamp(8.5rem,14vw,13.5rem)] rounded-full bg-[#fc8800] transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover/title:translate-x-[-0.75rem] group-hover/title:translate-y-[0.75rem] group-hover/title:scale-[1.06] motion-reduce:transition-none max-sm:-top-[14%] max-sm:-right-[18%] max-sm:w-50"
+            className="absolute -top-[48%] -right-[8%] aspect-square w-[clamp(8.5rem,14vw,13.5rem)] rounded-full bg-[var(--palette-orange)] transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover/title:translate-x-[-0.75rem] group-hover/title:translate-y-[0.75rem] group-hover/title:scale-[1.06] motion-reduce:transition-none max-sm:-top-[14%] max-sm:-right-[18%] max-sm:w-50"
             aria-hidden="true"
           />
           <p className="relative z-[1] m-0 font-[family-name:var(--font-utility)] text-[clamp(0.62rem,0.75vw,0.75rem)] font-bold tracking-[0.17em] uppercase">
@@ -83,7 +89,7 @@ export default function Hero() {
             一期一会
           </h1>
           <div className="relative z-[1] grid grid-cols-[0.8fr_1.2fr] items-end gap-3 max-sm:grid-cols-1">
-            <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.85rem,1.2vw,1.2rem)] font-extrabold tracking-[0.12em] text-[#5a005d] uppercase">
+            <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.85rem,1.2vw,1.2rem)] font-extrabold tracking-[0.12em] text-[var(--palette-purple)] uppercase">
               Ichigo Ichiê
             </p>
             <p className="m-0 max-w-100 text-[clamp(0.68rem,0.8vw,0.82rem)] leading-[1.35] font-medium max-sm:max-w-76 max-sm:text-[0.78rem]">
@@ -122,21 +128,21 @@ export default function Hero() {
         />
 
         <aside
-          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-[#5a005d] bg-[linear-gradient(125deg,transparent_50%,rgba(252,136,0,0.12))] p-[clamp(1rem,1.5vw,1.45rem)] text-white max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
+          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-purple)] bg-[linear-gradient(125deg,transparent_50%,color-mix(in_srgb,var(--palette-orange)_12%,transparent))] p-[clamp(1rem,1.5vw,1.45rem)] text-[var(--palette-paper)] max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
           id="contato"
         >
           <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.7vw,0.72rem)] font-semibold tracking-[0.14em] uppercase">
             Ensaios · Eventos · Retratos
           </p>
           <a
-            className="group/contact relative block w-fit font-[family-name:var(--font-utility)] text-[clamp(1.2rem,1.75vw,1.8rem)] leading-[0.98] font-bold tracking-[-0.02em] text-inherit uppercase no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#fc8800] max-sm:pr-18 max-sm:text-[1.45rem]"
+            className="group/contact relative block w-fit font-[family-name:var(--font-utility)] text-[clamp(1.2rem,1.75vw,1.8rem)] leading-[0.98] font-bold tracking-[-0.02em] text-inherit uppercase no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] max-sm:pr-18 max-sm:text-[1.45rem]"
             href="#redes"
           >
             Vamos registrar
             <br />
             o seu momento
             <span
-              className="ml-1.5 inline-block text-[#fc8800] transition-transform duration-200 ease-out group-hover/contact:translate-x-[0.18rem] group-hover/contact:translate-y-[-0.18rem] motion-reduce:transition-none"
+              className="ml-1.5 inline-block text-[var(--palette-orange)] transition-transform duration-200 ease-out group-hover/contact:translate-x-[0.18rem] group-hover/contact:translate-y-[-0.18rem] motion-reduce:transition-none"
               aria-hidden="true"
             >
               ↗
@@ -148,7 +154,7 @@ export default function Hero() {
             aria-label="Redes sociais"
           >
             <a
-              className="grid aspect-square w-8 place-items-center rounded-full border border-white/35 text-base text-white transition-[color,background,border-color] duration-180 ease-out hover:border-[#fc8800] hover:bg-[#fc8800] hover:text-[#0f0f0f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#fc8800] motion-reduce:transition-none"
+              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
               aria-label="Instagram"
               href="https://www.instagram.com/"
               rel="noreferrer"
@@ -157,7 +163,7 @@ export default function Hero() {
               <IoLogoInstagram aria-hidden="true" />
             </a>
             <a
-              className="grid aspect-square w-8 place-items-center rounded-full border border-white/35 text-base text-white transition-[color,background,border-color] duration-180 ease-out hover:border-[#fc8800] hover:bg-[#fc8800] hover:text-[#0f0f0f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#fc8800] motion-reduce:transition-none"
+              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
               aria-label="Facebook"
               href="https://www.facebook.com/"
               rel="noreferrer"
