@@ -1,8 +1,6 @@
 import Image from "next/image";
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 
-import styles from "./hero.module.css";
-
 type PhotoTileProps = {
   alt: string;
   className: string;
@@ -23,18 +21,22 @@ function PhotoTile({
   term,
 }: PhotoTileProps) {
   return (
-    <figure className={`${styles.photoTile} ${className}`}>
+    <figure
+      className={`group/photo relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-[#211f20] after:pointer-events-none after:absolute after:inset-0 after:z-[1] after:bg-[linear-gradient(to_top,rgba(15,15,15,0.82)_0,rgba(15,15,15,0.08)_36%,transparent_58%)] after:content-[''] ${className}`}
+    >
       <Image
         fill
         alt={alt}
-        className={styles.photo}
+        className="scale-[1.01] object-cover saturate-90 contrast-[1.06] transition-[transform,filter] duration-[650ms] ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover/photo:scale-[1.055] group-hover/photo:saturate-[1.08] group-hover/photo:contrast-[1.02] motion-reduce:transition-none"
         priority={priority}
         sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 48vw"
         src={src}
         style={{ objectPosition: position }}
       />
-      <figcaption className={styles.caption}>
-        <span className={styles.captionTerm}>{term}</span>
+      <figcaption className="absolute right-[clamp(0.8rem,1.1vw,1.1rem)] bottom-[clamp(0.75rem,1vw,1rem)] left-[clamp(0.8rem,1.1vw,1.1rem)] z-[2] flex items-end justify-between gap-3 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.72vw,0.72rem)] font-semibold tracking-[0.15em] uppercase">
+        <span className="font-[family-name:var(--font-display)] text-[clamp(0.78rem,0.95vw,0.98rem)] font-normal tracking-[0.04em] text-[#fc8800] normal-case">
+          {term}
+        </span>
         <span>{label}</span>
       </figcaption>
     </figure>
@@ -43,33 +45,48 @@ function PhotoTile({
 
 export default function Hero() {
   return (
-    <section className={styles.hero} id="inicio" aria-labelledby="hero-title">
-      <div className={styles.bento}>
-        <div className={`${styles.tile} ${styles.brandTile}`}>
+    <section
+      className="isolate flex min-h-svh items-center bg-[#0f0f0f] bg-[radial-gradient(circle_at_8%_8%,rgba(90,0,93,0.28),transparent_24rem)] p-[clamp(0.75rem,1.6vw,1.75rem)] text-white max-lg:block max-sm:p-[0.65rem]"
+      id="inicio"
+      aria-labelledby="hero-title"
+    >
+      <div className="mx-auto grid h-[clamp(40rem,calc(100svh-clamp(1.5rem,3.2vw,3.5rem)),62rem)] w-full grid-cols-12 grid-rows-8 gap-[clamp(0.55rem,0.85vw,0.9rem)] max-lg:h-auto max-lg:min-h-0 max-lg:grid-cols-2 max-lg:grid-rows-none">
+        <div className="relative flex min-w-0 [grid-area:1/1/3/4] items-center justify-center overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-[#5a005d] bg-[linear-gradient(135deg,rgba(252,136,0,0.12),transparent_45%)] max-lg:min-h-44 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]">
           <Image
             alt="Símbolo visual do portfólio"
-            className={styles.logo}
+            className="h-auto w-[min(48%,8.25rem)] drop-shadow-[0_0.5rem_1rem_rgba(15,15,15,0.38)] max-lg:w-26"
             height={564}
             priority
             src="/logo-y.png"
             width={418}
           />
-          <p className={styles.brandNote}>
+          <p className="absolute right-3.5 bottom-3 m-0 text-right font-[family-name:var(--font-utility)] text-[clamp(0.55rem,0.75vw,0.72rem)] leading-[1.2] font-semibold tracking-[0.12em] text-white/70 uppercase">
             Fotografia de
             <br />
             cultura japonesa
           </p>
         </div>
 
-        <header className={`${styles.tile} ${styles.titleTile}`}>
-          <span className={styles.sun} aria-hidden="true" />
-          <p className={styles.kicker}>Um encontro · Um instante</p>
-          <h1 className={styles.japaneseTitle} id="hero-title" lang="ja">
+        <header className="group/title relative flex min-w-0 [grid-area:1/4/3/8] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-white p-[clamp(1rem,1.5vw,1.5rem)] text-[#0f0f0f] max-lg:min-h-84 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-88">
+          <span
+            className="absolute -top-[48%] -right-[8%] aspect-square w-[clamp(8.5rem,14vw,13.5rem)] rounded-full bg-[#fc8800] transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover/title:translate-x-[-0.75rem] group-hover/title:translate-y-[0.75rem] group-hover/title:scale-[1.06] motion-reduce:transition-none max-sm:-top-[14%] max-sm:-right-[18%] max-sm:w-50"
+            aria-hidden="true"
+          />
+          <p className="relative z-[1] m-0 font-[family-name:var(--font-utility)] text-[clamp(0.62rem,0.75vw,0.75rem)] font-bold tracking-[0.17em] uppercase">
+            Um encontro · Um instante
+          </p>
+          <h1
+            className="relative z-[1] -mt-1 mb-0 self-start whitespace-nowrap font-[family-name:var(--font-display)] text-[clamp(2.8rem,5vw,5.8rem)] leading-[0.92] font-normal tracking-[-0.08em] max-lg:text-[clamp(3.4rem,13vw,6rem)]"
+            id="hero-title"
+            lang="ja"
+          >
             一期一会
           </h1>
-          <div className={styles.titleFooter}>
-            <p className={styles.romanized}>Ichigo Ichiê</p>
-            <p className={styles.intro}>
+          <div className="relative z-[1] grid grid-cols-[0.8fr_1.2fr] items-end gap-3 max-sm:grid-cols-1">
+            <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.85rem,1.2vw,1.2rem)] font-extrabold tracking-[0.12em] text-[#5a005d] uppercase">
+              Ichigo Ichiê
+            </p>
+            <p className="m-0 max-w-100 text-[clamp(0.68rem,0.8vw,0.82rem)] leading-[1.35] font-medium max-sm:max-w-76 max-sm:text-[0.78rem]">
               Histórias que acontecem uma só vez, preservadas em luz,
               movimento e memória.
             </p>
@@ -78,7 +95,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Artista de dança tradicional japonesa sob luz cênica"
-          className={styles.mainPhoto}
+          className="[grid-area:1/8/6/13] max-lg:min-h-[min(36rem,78svh)] max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-124"
           label="movimento"
           position="54% center"
           priority
@@ -88,7 +105,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Taikoísta tocando durante uma apresentação"
-          className={styles.tallPhoto}
+          className="[grid-area:3/1/7/4] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
           label="pulso"
           position="44% center"
           src="/3.jpeg"
@@ -97,25 +114,41 @@ export default function Hero() {
 
         <PhotoTile
           alt="Músico concentrado diante de tambores taiko"
-          className={styles.rhythmPhoto}
+          className="[grid-area:3/4/6/8] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
           label="força"
           position="72% center"
           src="/2.jpeg"
           term="力 · Chikara"
         />
 
-        <aside className={`${styles.tile} ${styles.contactTile}`} id="contato">
-          <p className={styles.contactEyebrow}>Ensaios · Eventos · Retratos</p>
-          <a className={styles.contactLink} href="#redes">
+        <aside
+          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-white/20 bg-[#5a005d] bg-[linear-gradient(125deg,transparent_50%,rgba(252,136,0,0.12))] p-[clamp(1rem,1.5vw,1.45rem)] text-white max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
+          id="contato"
+        >
+          <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.7vw,0.72rem)] font-semibold tracking-[0.14em] uppercase">
+            Ensaios · Eventos · Retratos
+          </p>
+          <a
+            className="group/contact relative block w-fit font-[family-name:var(--font-utility)] text-[clamp(1.2rem,1.75vw,1.8rem)] leading-[0.98] font-bold tracking-[-0.02em] text-inherit uppercase no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#fc8800] max-sm:pr-18 max-sm:text-[1.45rem]"
+            href="#redes"
+          >
             Vamos registrar
             <br />
             o seu momento
-            <span className={styles.arrow} aria-hidden="true">
+            <span
+              className="ml-1.5 inline-block text-[#fc8800] transition-transform duration-200 ease-out group-hover/contact:translate-x-[0.18rem] group-hover/contact:translate-y-[-0.18rem] motion-reduce:transition-none"
+              aria-hidden="true"
+            >
               ↗
             </span>
           </a>
-          <div className={styles.socials} id="redes" aria-label="Redes sociais">
+          <div
+            className="absolute right-4 bottom-3.5 flex gap-2"
+            id="redes"
+            aria-label="Redes sociais"
+          >
             <a
+              className="grid aspect-square w-8 place-items-center rounded-full border border-white/35 text-base text-white transition-[color,background,border-color] duration-180 ease-out hover:border-[#fc8800] hover:bg-[#fc8800] hover:text-[#0f0f0f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#fc8800] motion-reduce:transition-none"
               aria-label="Instagram"
               href="https://www.instagram.com/"
               rel="noreferrer"
@@ -124,6 +157,7 @@ export default function Hero() {
               <IoLogoInstagram aria-hidden="true" />
             </a>
             <a
+              className="grid aspect-square w-8 place-items-center rounded-full border border-white/35 text-base text-white transition-[color,background,border-color] duration-180 ease-out hover:border-[#fc8800] hover:bg-[#fc8800] hover:text-[#0f0f0f] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#fc8800] motion-reduce:transition-none"
               aria-label="Facebook"
               href="https://www.facebook.com/"
               rel="noreferrer"
@@ -136,7 +170,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Grupo de taiko em apresentação coletiva"
-          className={styles.ensemblePhoto}
+          className="[grid-area:6/8/9/11] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
           label="coletivo"
           position="center 72%"
           src="/1.jpeg"
@@ -145,7 +179,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Artistas mascarados em uma apresentação cultural"
-          className={styles.festivalPhoto}
+          className="[grid-area:6/11/9/13] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
           label="celebração"
           position="center 32%"
           src="/6.jpeg"
@@ -154,14 +188,13 @@ export default function Hero() {
 
         <PhotoTile
           alt="Mãos e baquetas em detalhe sobre um tambor taiko"
-          className={styles.detailPhoto}
+          className="[grid-area:6/4/9/8] max-lg:min-h-80 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-68"
           label="detalhe"
           position="54% center"
           src="/4.jpeg"
           term="響 · Hibiki"
         />
       </div>
-
     </section>
   );
 }
