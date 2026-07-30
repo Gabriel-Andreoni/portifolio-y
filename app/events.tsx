@@ -9,52 +9,142 @@ import { portfolioPaletteVariables } from "./palette";
 const categories = [
   {
     description:
-      "Ritmo coletivo, precisão e presença transformados em memória visual.",
-    id: "apresentacoes",
-    japanese: "演奏",
-    label: "Apresentações",
+      "Palco, dança, taiko e encontros espontâneos na celebração da cultura japonesa em Sumaré.",
+    id: "festival-japao-sumare",
+    japanese: "祭",
+    label: "Festival do Japão - Sumaré",
+    images: [
+      {
+        alt: "Taikoístas em apresentação conjunta no Festival do Japão em Sumaré",
+        layout:
+          "col-span-2 row-span-4 sm:col-span-4 lg:[grid-area:1/1/6/8]",
+        position: "center 42%",
+      },
+      {
+        alt: "Cantora de quimono laranja se apresentando no palco",
+        layout:
+          "col-span-1 row-span-4 sm:col-span-2 lg:[grid-area:1/8/6/11]",
+        position: "center 28%",
+      },
+      {
+        alt: "Taikoísta tocando um grande tambor durante o festival",
+        layout:
+          "col-span-1 row-span-4 sm:col-span-2 lg:[grid-area:1/11/6/13]",
+        position: "center center",
+      },
+      {
+        alt: "Grupo de artistas mascarados em uma apresentação cultural",
+        layout:
+          "col-span-2 row-span-3 sm:col-span-4 lg:[grid-area:6/1/10/5]",
+        position: "center 38%",
+      },
+      {
+        alt: "Taikoísta concentrada durante uma apresentação ao ar livre",
+        layout:
+          "col-span-1 row-span-4 sm:col-span-2 lg:[grid-area:6/5/10/8]",
+        position: "55% center",
+      },
+      {
+        alt: "Dançarina de traje tradicional em movimento no palco",
+        layout:
+          "col-span-1 row-span-4 sm:col-span-2 lg:[grid-area:6/8/10/10]",
+        position: "center 30%",
+      },
+      {
+        alt: "Artista em apresentação com um leque azul cobrindo o rosto",
+        layout:
+          "col-span-2 row-span-4 sm:col-span-2 lg:[grid-area:6/10/10/13]",
+        position: "center 34%",
+      },
+      {
+        alt: "Público participando de uma dança em roda junto ao torii",
+        layout:
+          "col-span-2 row-span-3 sm:col-span-2 lg:[grid-area:10/1/13/6]",
+        position: "center 50%",
+      },
+      {
+        alt: "Abraço entre participantes durante o Festival do Japão",
+        layout:
+          "col-span-2 row-span-3 sm:col-span-2 lg:[grid-area:10/6/13/10]",
+        position: "center center",
+      },
+      {
+        alt: "Grupo de dançarinas em figurinos vermelhos durante o festival",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:10/10/13/13]",
+        position: "center 34%",
+      },
+    ],
   },
   {
     description:
-      "A nova geração em movimento: disciplina, descoberta e alegria no mesmo quadro.",
-    id: "junior",
-    japanese: "若",
-    label: "Júnior",
+      "A energia do taiko e das danças de Okinawa em uma narrativa de força, cor e coletividade.",
+    id: "rkmd-2025",
+    japanese: "太鼓",
+    label: "RKMD - 2025",
+    images: [
+      {
+        alt: "Artista conduzindo uma dança com a cabeça de um dragão",
+        layout:
+          "col-span-2 row-span-4 sm:col-span-4 lg:[grid-area:1/1/6/8]",
+        position: "center 38%",
+      },
+      {
+        alt: "Taikoísta erguendo uma baqueta diante da cortina vermelha",
+        layout:
+          "col-span-1 row-span-4 sm:col-span-2 lg:[grid-area:1/8/6/11]",
+        position: "center 30%",
+      },
+      {
+        alt: "Taikoísta em primeiro plano durante a apresentação coletiva",
+        layout:
+          "col-span-1 row-span-4 sm:col-span-2 lg:[grid-area:1/11/6/13]",
+        position: "center 28%",
+      },
+      {
+        alt: "Grande retrato coletivo dos participantes do RKMD 2025",
+        layout:
+          "col-span-2 row-span-3 sm:col-span-4 lg:[grid-area:6/1/9/7]",
+        position: "center center",
+      },
+      {
+        alt: "Taikoísta tocando com o grupo em figurinos vermelhos e amarelos",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:6/7/9/10]",
+        position: "center 34%",
+      },
+      {
+        alt: "Pessoa registrando a apresentação do RKMD pelo celular",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:6/10/9/13]",
+        position: "center 50%",
+      },
+      {
+        alt: "Dançarinas com sombrinhas roxas em apresentação tradicional",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:9/1/12/4]",
+        position: "center 35%",
+      },
+      {
+        alt: "Composição abstrata com leques azuis durante uma dança",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:9/4/12/7]",
+        position: "center 35%",
+      },
+      {
+        alt: "Grupo dançando com leques coloridos no palco",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:9/7/12/10]",
+        position: "center center",
+      },
+      {
+        alt: "Taikoísta tocando um tambor vermelho durante o RKMD",
+        layout:
+          "col-span-1 row-span-3 sm:col-span-2 lg:[grid-area:9/10/12/13]",
+        position: "center 32%",
+      },
+    ],
   },
-  {
-    description:
-      "A escala do grande tambor, o silêncio anterior e a força de cada impacto.",
-    id: "odaiko",
-    japanese: "大太鼓",
-    label: "Odaiko",
-  },
-  {
-    description:
-      "Concentração, ajustes e encontros que acontecem antes de o palco ganhar vida.",
-    id: "passagem-palco",
-    japanese: "舞台",
-    label: "Passagem de palco",
-  },
-  {
-    description:
-      "A conquista compartilhada e a emoção que permanece depois da apresentação.",
-    id: "premiacao",
-    japanese: "栄誉",
-    label: "Premiação",
-  },
-] as const;
-
-const tileLayouts = [
-  "col-span-2 row-span-5 sm:col-span-4 lg:col-span-7 lg:row-span-5",
-  "col-span-1 row-span-3 sm:col-span-2 lg:col-span-3",
-  "col-span-1 row-span-3 sm:col-span-2 lg:col-span-2",
-  "col-span-2 row-span-3 sm:col-span-4 lg:col-span-5",
-  "col-span-1 row-span-3 sm:col-span-2 lg:col-span-4",
-  "col-span-1 row-span-3 sm:col-span-2 lg:col-span-4",
-  "col-span-2 row-span-3 sm:col-span-2 lg:col-span-4",
-  "col-span-2 row-span-3 sm:col-span-2 lg:col-span-6",
-  "col-span-1 row-span-3 sm:col-span-1 lg:col-span-3",
-  "col-span-1 row-span-3 sm:col-span-1 lg:col-span-3",
 ] as const;
 
 type CategoryId = (typeof categories)[number]["id"];
@@ -65,7 +155,7 @@ function getImagePath(category: CategoryId, index: number) {
 
 export default function Events() {
   const [activeCategoryId, setActiveCategoryId] =
-    useState<CategoryId>("apresentacoes");
+    useState<CategoryId>("festival-japao-sumare");
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const activeCategory =
@@ -150,7 +240,7 @@ export default function Events() {
             <div className="flex items-start justify-between gap-4 border-b border-[color-mix(in_srgb,var(--palette-paper)_16%,transparent)] pb-5">
               <div>
                 <p className="m-0 font-[family-name:var(--font-utility)] text-[0.65rem] font-semibold tracking-[0.16em] text-[var(--palette-orange)] uppercase">
-                  Escolha o seu olhar
+                  Escolha o evento
                 </p>
                 <p className="mt-2 mb-0 font-[family-name:var(--font-display)] text-[clamp(1.35rem,2vw,2rem)] leading-none">
                   Categorias
@@ -179,7 +269,7 @@ export default function Events() {
                     }}
                     aria-controls="events-gallery"
                     aria-selected={isActive}
-                    className={`group flex min-w-max items-center justify-between gap-5 rounded-lg border px-3.5 py-3 text-left font-[family-name:var(--font-utility)] text-sm font-bold tracking-[0.08em] uppercase transition-[color,background,border-color,transform] duration-200 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none lg:min-w-0 lg:w-full ${
+                    className={`group flex min-w-max items-center justify-between gap-5 rounded-lg border px-3.5 py-3 text-left font-[family-name:var(--font-utility)] text-sm leading-tight font-bold tracking-[0.08em] uppercase transition-[color,background,border-color,transform] duration-200 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none lg:min-w-0 lg:w-full ${
                       isActive
                         ? "border-[var(--palette-orange)] bg-[var(--palette-orange)] text-[var(--palette-ink)]"
                         : "border-[color-mix(in_srgb,var(--palette-paper)_18%,transparent)] text-[color-mix(in_srgb,var(--palette-paper)_72%,transparent)] hover:translate-x-1 hover:border-[color-mix(in_srgb,var(--palette-paper)_45%,transparent)] hover:text-[var(--palette-paper)]"
@@ -206,8 +296,8 @@ export default function Events() {
                 10 registros selecionados
               </p>
               <p className="mt-3 mb-0 max-w-sm text-sm leading-relaxed text-[color-mix(in_srgb,var(--palette-paper)_74%,transparent)]">
-                Seu evento merece atenção ao que acontece no palco e ao que só
-                existe por um segundo.
+                Uma curadoria de palco, bastidores e público para contar cada
+                evento como uma história completa.
               </p>
               <a
                 className="group mt-6 flex items-center justify-between gap-4 rounded-lg bg-[var(--palette-purple)] px-4 py-4 font-[family-name:var(--font-utility)] text-base font-bold tracking-[0.04em] text-[var(--palette-paper)] uppercase no-underline transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
@@ -232,7 +322,7 @@ export default function Events() {
                 <p className="m-0 font-[family-name:var(--font-utility)] text-[0.65rem] font-bold tracking-[0.16em] text-[var(--palette-purple)] uppercase">
                   Categoria selecionada
                 </p>
-                <h3 className="mt-1 mb-0 font-[family-name:var(--font-display)] text-[clamp(1.8rem,3.4vw,3.5rem)] leading-none tracking-[-0.055em] uppercase">
+                <h3 className="mt-1 mb-0 max-w-[18ch] font-[family-name:var(--font-display)] text-[clamp(1.65rem,3vw,3.1rem)] leading-[0.95] tracking-[-0.055em] uppercase">
                   {activeCategory.label}
                 </h3>
               </div>
@@ -245,17 +335,18 @@ export default function Events() {
               className="grid auto-rows-[5.5rem] grid-flow-dense grid-cols-2 gap-[clamp(0.55rem,0.85vw,0.9rem)] sm:grid-cols-4 lg:grid-cols-12"
               key={activeCategory.id}
             >
-              {tileLayouts.map((layout, index) => (
+              {activeCategory.images.map((image, index) => (
                 <figure
-                  className={`group relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-ink)_18%,transparent)] bg-[var(--palette-graphite)] ${layout}`}
+                  className={`group relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-ink)_18%,transparent)] bg-[var(--palette-graphite)] ${image.layout}`}
                   key={getImagePath(activeCategory.id, index)}
                 >
                   <Image
                     fill
-                    alt={`${activeCategory.label}: fotografia de evento com foco em movimento, pessoas e atmosfera`}
+                    alt={image.alt}
                     className="scale-[1.01] object-cover saturate-90 contrast-[1.04] transition-[transform,filter] duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover:scale-[1.045] group-hover:saturate-100 motion-reduce:transition-none"
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 42vw"
                     src={getImagePath(activeCategory.id, index)}
+                    style={{ objectPosition: image.position }}
                   />
                   <span
                     aria-hidden="true"
