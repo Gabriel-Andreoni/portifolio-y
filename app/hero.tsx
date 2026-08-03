@@ -6,6 +6,7 @@ import { portfolioPaletteVariables } from "./palette";
 
 type PhotoTileProps = {
   alt: string;
+  caption?: string;
   className: string;
   japanese: string;
   label: string;
@@ -17,6 +18,7 @@ type PhotoTileProps = {
 
 function PhotoTile({
   alt,
+  caption,
   className,
   japanese,
   label,
@@ -39,16 +41,22 @@ function PhotoTile({
         style={{ objectPosition: position }}
       />
       <figcaption className="absolute right-[clamp(0.8rem,1.1vw,1.1rem)] bottom-[clamp(0.75rem,1vw,1rem)] left-[clamp(0.8rem,1.1vw,1.1rem)] z-[2] flex items-end justify-between gap-3 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.72vw,0.72rem)] font-semibold tracking-[0.15em] uppercase">
-        <span className="font-[family-name:var(--font-display)] text-[clamp(0.78rem,0.95vw,0.98rem)] font-normal tracking-[0.04em] text-[var(--palette-orange)] normal-case">
-          <span
-            className="font-[family-name:var(--font-japanese)]"
-            lang="ja"
-          >
-            {japanese}
-          </span>{" "}
-          · {romanized}
-        </span>
-        <span>{label}</span>
+        {caption ? (
+          <span className="text-[var(--palette-paper)]">{caption}</span>
+        ) : (
+          <>
+            <span className="font-[family-name:var(--font-display)] text-[clamp(0.78rem,0.95vw,0.98rem)] font-normal tracking-[0.04em] text-[var(--palette-orange)] normal-case">
+              <span
+                className="font-[family-name:var(--font-japanese)]"
+                lang="ja"
+              >
+                {japanese}
+              </span>{" "}
+              · {romanized}
+            </span>
+            <span>{label}</span>
+          </>
+        )}
       </figcaption>
     </figure>
   );
@@ -105,6 +113,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Artista de dança tradicional japonesa sob luz cênica"
+          caption="Foto Gueixa - Kawasuji Fest - 2024"
           className="[grid-area:1/8/6/13] max-lg:min-h-[min(36rem,78svh)] max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-124"
           japanese="舞"
           label="movimento"
@@ -116,6 +125,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Taikoísta tocando durante uma apresentação"
+          caption={'Foto "Kodô" - Kawasuji Fest - 2024'}
           className="[grid-area:3/1/7/4] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
           japanese="鼓動"
           label="pulso"
@@ -193,6 +203,7 @@ export default function Hero() {
 
         <PhotoTile
           alt="Artistas mascarados em uma apresentação cultural"
+          caption="Foto Máscaras - Festival do Japão de Sumaré - 2024"
           className="[grid-area:6/11/9/13] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
           japanese="祭"
           label="celebração"
