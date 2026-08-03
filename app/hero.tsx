@@ -94,21 +94,12 @@ export default function Hero() {
             Um encontro · Um instante
           </p>
           <h1
-            className="relative z-[1] -mt-1 mb-0 self-start whitespace-nowrap font-[family-name:var(--font-japanese)] text-[clamp(2.8rem,5vw,5.8rem)] leading-[0.92] font-normal tracking-[-0.08em] max-lg:text-[clamp(3.4rem,13vw,6rem)]"
+            className="relative z-[1] m-0 max-w-[22ch] font-[family-name:var(--font-display)] text-[clamp(1.4rem,1.9vw,2rem)] leading-[0.98] tracking-[-0.045em] uppercase max-lg:text-[clamp(2.15rem,7vw,3.5rem)]"
             id="hero-title"
-            lang="ja"
           >
-            一期一会
+            Histórias que acontecem uma só vez, preservadas em luz, movimento e
+            memória.
           </h1>
-          <div className="relative z-[1] grid grid-cols-[0.8fr_1.2fr] items-end gap-3 max-sm:grid-cols-1">
-            <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.85rem,1.2vw,1.2rem)] font-extrabold tracking-[0.12em] text-[var(--palette-purple)] uppercase">
-              Ichigo Ichiê
-            </p>
-            <p className="m-0 max-w-100 text-[clamp(0.68rem,0.8vw,0.82rem)] leading-[1.35] font-medium max-sm:max-w-76 max-sm:text-[0.78rem]">
-              Histórias que acontecem uma só vez, preservadas em luz,
-              movimento e memória.
-            </p>
-          </div>
         </header>
 
         <PhotoTile
