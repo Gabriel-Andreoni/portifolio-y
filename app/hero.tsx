@@ -57,7 +57,7 @@ function PhotoTile({
 export default function Hero() {
   return (
     <section
-      className="relative isolate flex min-h-svh items-center bg-[var(--palette-ink)] bg-[radial-gradient(circle_at_8%_8%,color-mix(in_srgb,var(--palette-purple)_28%,transparent),transparent_24rem)] p-[clamp(0.75rem,1.6vw,1.75rem)] text-[var(--palette-paper)] max-lg:block max-sm:p-[0.65rem]"
+      className="relative isolate flex min-h-svh items-center p-[clamp(0.75rem,1.6vw,1.75rem)] text-[var(--palette-paper)] max-lg:block max-sm:p-[0.65rem]"
       id="inicio"
       aria-labelledby="hero-title"
       style={portfolioPaletteVariables}

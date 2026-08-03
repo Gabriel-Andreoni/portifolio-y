@@ -15,14 +15,14 @@ type AboutPaletteVariables = CSSProperties &
   >;
 
 const aboutPaletteVariables: AboutPaletteVariables = {
-  "--about-accent": "#ff9900",
-  "--about-background": "#171918",
-  "--about-border": "#3f423f",
-  "--about-ink": "#f7f1e7",
-  "--about-muted": "#c9c2b8",
-  "--about-photo-shade": "#111311",
-  "--about-secondary": "#c84224",
-  "--about-surface": "#252725",
+  "--about-accent": "var(--site-accent)",
+  "--about-background": "var(--site-background)",
+  "--about-border": "var(--site-border)",
+  "--about-ink": "var(--site-ink)",
+  "--about-muted": "var(--site-muted)",
+  "--about-photo-shade": "var(--site-photo-shade)",
+  "--about-secondary": "var(--site-secondary)",
+  "--about-surface": "var(--site-surface)",
 };
 
 const workTypes = [
@@ -62,14 +62,10 @@ export default function About() {
   return (
     <section
       aria-labelledby="about-title"
-      className="relative isolate overflow-hidden bg-[var(--about-background)] px-[clamp(0.75rem,1.6vw,1.75rem)] py-[clamp(5.5rem,9vw,9rem)] text-[var(--about-ink)]"
+      className="relative isolate overflow-hidden px-[clamp(0.75rem,1.6vw,1.75rem)] py-[clamp(5.5rem,9vw,9rem)] text-[var(--about-ink)]"
       id="sobre"
       style={aboutPaletteVariables}
     >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_18%_32%,color-mix(in_srgb,var(--about-accent)_9%,transparent),transparent_30%),radial-gradient(circle_at_86%_64%,color-mix(in_srgb,var(--about-secondary)_11%,transparent),transparent_34%),linear-gradient(180deg,var(--about-background),color-mix(in_srgb,var(--about-surface)_76%,var(--about-background)))]"
-      />
       <div className="relative mx-auto max-w-[96rem]">
         <header className="mb-[clamp(3rem,6vw,6rem)] grid grid-cols-1 gap-6 border-b border-[var(--about-border)] pb-[clamp(1.5rem,3vw,2.5rem)] lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-4">

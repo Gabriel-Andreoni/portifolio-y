@@ -198,14 +198,14 @@ export default function Events() {
   return (
     <section
       aria-labelledby="events-title"
-      className="relative overflow-clip bg-[var(--palette-paper)] px-[clamp(0.75rem,1.6vw,1.75rem)] py-[clamp(4.5rem,9vw,9rem)] text-[var(--palette-ink)]"
+      className="relative overflow-clip px-[clamp(0.75rem,1.6vw,1.75rem)] py-[clamp(4.5rem,9vw,9rem)] text-[var(--site-ink)]"
       id="eventos"
       style={portfolioPaletteVariables}
     >
       <div className="relative mx-auto max-w-[96rem]">
         <header className="mb-[clamp(2.5rem,6vw,5.5rem)] grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-4">
-            <p className="m-0 font-[family-name:var(--font-utility)] text-xs font-bold tracking-[0.17em] text-[var(--palette-purple)] uppercase">
+            <p className="m-0 font-[family-name:var(--font-utility)] text-xs font-bold tracking-[0.17em] text-[var(--site-accent)] uppercase">
               Trabalhos realizados
             </p>
             <p
@@ -223,7 +223,7 @@ export default function Events() {
             >
               O instante decide tudo.
             </h2>
-            <p className="mt-7 mb-0 max-w-2xl text-[clamp(0.95rem,1.25vw,1.2rem)] leading-relaxed font-medium text-[color-mix(in_srgb,var(--palette-ink)_68%,transparent)]">
+            <p className="mt-7 mb-0 max-w-2xl text-[clamp(0.95rem,1.25vw,1.2rem)] leading-relaxed font-medium text-[var(--site-muted)]">
               Cada evento tem um ritmo próprio. Escolha uma categoria e veja
               como presença, movimento e emoção se transformam em narrativa.
             </p>
@@ -315,16 +315,16 @@ export default function Events() {
             id="events-gallery"
             role="tabpanel"
           >
-            <div className="mb-4 flex flex-col justify-between gap-3 border-b border-[color-mix(in_srgb,var(--palette-ink)_18%,transparent)] pb-4 sm:flex-row sm:items-end">
+            <div className="mb-4 flex flex-col justify-between gap-3 border-b border-[var(--site-border)] pb-4 sm:flex-row sm:items-end">
               <div>
-                <p className="m-0 font-[family-name:var(--font-utility)] text-[0.65rem] font-bold tracking-[0.16em] text-[var(--palette-purple)] uppercase">
+                <p className="m-0 font-[family-name:var(--font-utility)] text-[0.65rem] font-bold tracking-[0.16em] text-[var(--site-accent)] uppercase">
                   Categoria selecionada
                 </p>
                 <h3 className="mt-1 mb-0 max-w-[18ch] font-[family-name:var(--font-display)] text-[clamp(1.65rem,3vw,3.1rem)] leading-[0.95] tracking-[-0.055em] uppercase">
                   {activeCategory.label}
                 </h3>
               </div>
-              <p className="m-0 max-w-lg text-sm leading-relaxed text-[color-mix(in_srgb,var(--palette-ink)_62%,transparent)]">
+              <p className="m-0 max-w-lg text-sm leading-relaxed text-[var(--site-muted)]">
                 {activeCategory.description}
               </p>
             </div>
@@ -335,7 +335,7 @@ export default function Events() {
             >
               {activeCategory.images.map((image, index) => (
                 <figure
-                  className={`group relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-ink)_18%,transparent)] bg-[var(--palette-graphite)] ${image.layout}`}
+                  className={`group relative m-0 min-w-0 overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[var(--site-border)] bg-[var(--palette-graphite)] ${image.layout}`}
                   key={getImagePath(activeCategory.id, index)}
                 >
                   <Image
