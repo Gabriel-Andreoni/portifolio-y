@@ -2,6 +2,8 @@
 
 :root {
   --background: #0f0f0f;
+  --font-display: var(--font-montserrat);
+  --font-utility: var(--font-montserrat);
   --foreground: #ffffff;
 }
 
@@ -14,7 +16,7 @@ body {
   margin: 0;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
 }
 
 * {

@@ -214,7 +214,7 @@ export default function Events() {
               Trabalhos realizados
             </p>
             <p
-              className="mt-3 mb-0 font-[family-name:var(--font-display)] text-[clamp(1.15rem,1.8vw,1.8rem)] tracking-[-0.045em]"
+              className="mt-3 mb-0 font-[family-name:var(--font-japanese)] text-[clamp(1.15rem,1.8vw,1.8rem)] tracking-[-0.045em]"
               lang="ja"
             >
               一瞬を、永遠に。
@@ -247,7 +247,7 @@ export default function Events() {
                 </p>
               </div>
               <span
-                className="font-[family-name:var(--font-display)] text-2xl text-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)]"
+                className="font-[family-name:var(--font-japanese)] text-2xl text-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)]"
                 lang="ja"
               >
                 選
@@ -283,7 +283,10 @@ export default function Events() {
                     type="button"
                   >
                     {category.label}
-                    <span className="font-[family-name:var(--font-display)] text-base normal-case opacity-50">
+                    <span
+                      className="font-[family-name:var(--font-japanese)] text-base normal-case opacity-50"
+                      lang="ja"
+                    >
                       {category.japanese}
                     </span>
                   </button>
@@ -353,7 +356,10 @@ export default function Events() {
                     className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_top,color-mix(in_srgb,var(--palette-ink)_72%,transparent),transparent_42%)] opacity-70 transition-opacity duration-300 group-hover:opacity-45 motion-reduce:transition-none"
                   />
                   <figcaption className="absolute right-3 bottom-3 left-3 z-[1] flex items-end justify-between gap-3 font-[family-name:var(--font-utility)] text-[0.62rem] font-semibold tracking-[0.14em] text-[var(--palette-paper)] uppercase">
-                    <span className="text-[var(--palette-orange)]">
+                    <span
+                      className="font-[family-name:var(--font-japanese)] text-[var(--palette-orange)]"
+                      lang="ja"
+                    >
                       {activeCategory.japanese}
                     </span>
                     <span>Registro autoral</span>

@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 export const portfolioPalette = {
   graphite: "#211f20",
   ink: "#0f0f0f",
-  orange: "#fc8800",
+  orange: "#ff9900",
   paper: "#ffffff",
   purple: "#5a005d",
 } as const;

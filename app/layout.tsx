@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Dela_Gothic_One } from "next/font/google";
+import { Dela_Gothic_One, Montserrat } from "next/font/google";
 
 import "./globals.css";
 
-const barlowCondensed = Barlow_Condensed({
-  variable: "--font-utility",
-  weight: ["400", "500", "600", "700", "800"],
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
 const delaGothic = Dela_Gothic_One({
-  variable: "--font-display",
+  variable: "--font-japanese",
   weight: "400",
   subsets: ["latin"],
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${barlowCondensed.variable} ${delaGothic.variable}`}
+      className={`${montserrat.variable} ${delaGothic.variable}`}
     >
       <body>{children}</body>
     </html>

@@ -125,7 +125,10 @@ export default function Menu() {
         >
           <header className="col-span-12 flex items-center justify-between rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_18%,transparent)] bg-[var(--palette-graphite)] px-[clamp(1rem,1.6vw,1.5rem)] py-3 text-[var(--palette-paper)]">
             <div>
-              <p className="m-0 font-[family-name:var(--font-display)] text-base tracking-[-0.04em]">
+              <p
+                className="m-0 font-[family-name:var(--font-japanese)] text-base tracking-[-0.04em]"
+                lang="ja"
+              >
                 一期一会
               </p>
               <p className="m-0 font-[family-name:var(--font-utility)] text-[0.62rem] font-semibold tracking-[0.16em] text-[color-mix(in_srgb,var(--palette-paper)_62%,transparent)] uppercase">
@@ -168,7 +171,7 @@ export default function Menu() {
                     {link.label}
                   </span>
                   <span
-                    className="font-[family-name:var(--font-display)] text-[clamp(1.25rem,2.5vw,2.7rem)] opacity-45 transition-[opacity,transform] duration-300 group-hover:translate-x-[-0.25rem] group-hover:opacity-100 motion-reduce:transition-none"
+                    className="font-[family-name:var(--font-japanese)] text-[clamp(1.25rem,2.5vw,2.7rem)] opacity-45 transition-[opacity,transform] duration-300 group-hover:translate-x-[-0.25rem] group-hover:opacity-100 motion-reduce:transition-none"
                     lang="ja"
                   >
                     {link.japanese}
