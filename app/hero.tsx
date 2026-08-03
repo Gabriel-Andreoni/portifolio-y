@@ -81,11 +81,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <header className="group/title relative flex min-w-0 [grid-area:1/4/3/8] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-paper)] p-[clamp(1rem,1.5vw,1.5rem)] text-[var(--palette-ink)] max-lg:min-h-84 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-88">
-          <span
-            className="absolute -top-[48%] -right-[8%] aspect-square w-[clamp(8.5rem,14vw,13.5rem)] rounded-full bg-[var(--palette-orange)] transition-transform duration-500 ease-[cubic-bezier(0.2,0.8,0.2,1)] group-hover/title:translate-x-[-0.75rem] group-hover/title:translate-y-[0.75rem] group-hover/title:scale-[1.06] motion-reduce:transition-none max-sm:-top-[14%] max-sm:-right-[18%] max-sm:w-50"
-            aria-hidden="true"
-          />
+        <header className="relative flex min-w-0 [grid-area:1/4/3/8] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-paper)] p-[clamp(1rem,1.5vw,1.5rem)] text-[var(--palette-ink)] max-lg:min-h-84 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-88">
           <p className="relative z-[1] m-0 font-[family-name:var(--font-utility)] text-[clamp(0.62rem,0.75vw,0.75rem)] font-bold tracking-[0.17em] uppercase">
             Um encontro · Um instante
           </p>

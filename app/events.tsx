@@ -202,11 +202,6 @@ export default function Events() {
       id="eventos"
       style={portfolioPaletteVariables}
     >
-      <span
-        aria-hidden="true"
-        className="absolute -top-[12vw] -right-[10vw] aspect-square w-[clamp(14rem,32vw,34rem)] rounded-full bg-[var(--palette-orange)] opacity-10"
-      />
-
       <div className="relative mx-auto max-w-[96rem]">
         <header className="mb-[clamp(2.5rem,6vw,5.5rem)] grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-4">
