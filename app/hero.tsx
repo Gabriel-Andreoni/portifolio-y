@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 
+import logoY from "../public/logo-y-monochrome.png";
 import Menu from "./menu";
 import { portfolioPaletteVariables } from "./palette";
 
@@ -73,14 +74,12 @@ export default function Hero() {
       <Menu />
 
       <div className="mx-auto grid h-[clamp(40rem,calc(100svh-clamp(1.5rem,3.2vw,3.5rem)),62rem)] w-full grid-cols-12 grid-rows-8 gap-[clamp(0.55rem,0.85vw,0.9rem)] max-lg:h-auto max-lg:min-h-0 max-lg:grid-cols-2 max-lg:grid-rows-none">
-        <div className="relative flex min-w-0 [grid-area:1/1/3/4] items-center justify-center overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-purple)] bg-[linear-gradient(135deg,color-mix(in_srgb,var(--palette-orange)_12%,transparent),transparent_45%)] max-lg:min-h-44 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]">
+        <div className="relative flex min-w-0 [grid-area:1/1/3/4] items-center justify-center overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_32%,transparent)] bg-[var(--palette-ink)] bg-[radial-gradient(circle_at_50%_42%,color-mix(in_srgb,var(--palette-paper)_11%,transparent),transparent_60%)] max-lg:min-h-44 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]">
           <Image
             alt="Símbolo visual do portfólio"
-            className="h-auto w-[min(48%,8.25rem)] drop-shadow-[0_0.5rem_1rem_color-mix(in_srgb,var(--palette-ink)_38%,transparent)] max-lg:w-26"
-            height={564}
+            className="h-auto w-[min(42%,8.25rem)] drop-shadow-[0_0.65rem_1.4rem_color-mix(in_srgb,var(--palette-paper)_14%,transparent)] max-lg:w-26"
             priority
-            src="/logo-y.png"
-            width={418}
+            src={logoY}
           />
           <p className="absolute right-3.5 bottom-3 m-0 text-right font-[family-name:var(--font-utility)] text-[clamp(0.55rem,0.75vw,0.72rem)] leading-[1.2] font-semibold tracking-[0.12em] text-[color-mix(in_srgb,var(--palette-paper)_70%,transparent)] uppercase">
             Fotografia de
