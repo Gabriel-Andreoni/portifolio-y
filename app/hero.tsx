@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
+import { IoGlobeOutline } from "react-icons/io5";
 
 import logoY from "../public/logo-y-monochrome.png";
 import Menu from "./menu";
@@ -162,21 +162,12 @@ export default function Hero() {
           >
             <a
               className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-paper)] motion-reduce:transition-none"
-              aria-label="Instagram"
-              href="https://www.instagram.com/"
+              aria-label="Acessar as redes sociais no Linktree"
+              href="https://linktr.ee/yk.studius"
               rel="noreferrer"
               target="_blank"
             >
-              <IoLogoInstagram aria-hidden="true" />
-            </a>
-            <a
-              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-paper)] motion-reduce:transition-none"
-              aria-label="Facebook"
-              href="https://www.facebook.com/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <IoLogoFacebook aria-hidden="true" />
+              <IoGlobeOutline aria-hidden="true" />
             </a>
           </div>
         </aside>
