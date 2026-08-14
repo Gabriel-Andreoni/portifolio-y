@@ -298,7 +298,7 @@ export default function Events() {
                 evento como uma história completa.
               </p>
               <a
-                className="group mt-6 flex items-center justify-between gap-4 rounded-lg bg-[var(--palette-purple)] px-4 py-4 font-[family-name:var(--font-utility)] text-base font-bold tracking-[0.04em] text-[var(--palette-paper)] uppercase no-underline transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
+                className="group mt-6 flex items-center justify-between gap-4 rounded-lg bg-[var(--palette-torii)] px-4 py-4 font-[family-name:var(--font-utility)] text-base font-bold tracking-[0.04em] text-[var(--palette-paper)] uppercase no-underline transition-[background,transform] duration-200 hover:-translate-y-0.5 hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
                 href="#contato"
               >
                 Conversar sobre meu evento

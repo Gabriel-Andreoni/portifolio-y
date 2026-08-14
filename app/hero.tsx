@@ -135,21 +135,21 @@ export default function Hero() {
         />
 
         <aside
-          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-purple)] bg-[linear-gradient(125deg,transparent_50%,color-mix(in_srgb,var(--palette-orange)_12%,transparent))] p-[clamp(1rem,1.5vw,1.45rem)] text-[var(--palette-paper)] max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
+          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-torii)] bg-[linear-gradient(125deg,transparent_50%,color-mix(in_srgb,var(--palette-orange)_12%,transparent))] p-[clamp(1rem,1.5vw,1.45rem)] text-[var(--palette-paper)] max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
           id="contato"
         >
           <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.7vw,0.72rem)] font-semibold tracking-[0.14em] uppercase">
             Ensaios · Eventos · Retratos
           </p>
           <a
-            className="group/contact relative block w-fit font-[family-name:var(--font-utility)] text-[clamp(1.2rem,1.75vw,1.8rem)] leading-[0.98] font-bold tracking-[-0.02em] text-inherit uppercase no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] max-sm:pr-18 max-sm:text-[1.45rem]"
+            className="group/contact relative block w-fit font-[family-name:var(--font-utility)] text-[clamp(1.2rem,1.75vw,1.8rem)] leading-[0.98] font-bold tracking-[-0.02em] text-inherit uppercase no-underline focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-paper)] max-sm:pr-18 max-sm:text-[1.45rem]"
             href="#redes"
           >
             Vamos registrar
             <br />
             o seu momento
             <span
-              className="ml-1.5 inline-block text-[var(--palette-orange)] transition-transform duration-200 ease-out group-hover/contact:translate-x-[0.18rem] group-hover/contact:translate-y-[-0.18rem] motion-reduce:transition-none"
+              className="ml-1.5 inline-block text-[var(--palette-paper)] transition-transform duration-200 ease-out group-hover/contact:translate-x-[0.18rem] group-hover/contact:translate-y-[-0.18rem] motion-reduce:transition-none"
               aria-hidden="true"
             >
               ↗
@@ -161,7 +161,7 @@ export default function Hero() {
             aria-label="Redes sociais"
           >
             <a
-              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
+              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-paper)] motion-reduce:transition-none"
               aria-label="Instagram"
               href="https://www.instagram.com/"
               rel="noreferrer"
@@ -170,7 +170,7 @@ export default function Hero() {
               <IoLogoInstagram aria-hidden="true" />
             </a>
             <a
-              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-orange)] motion-reduce:transition-none"
+              className="grid aspect-square w-8 place-items-center rounded-full border border-[color-mix(in_srgb,var(--palette-paper)_35%,transparent)] text-base text-[var(--palette-paper)] transition-[color,background,border-color] duration-180 ease-out hover:border-[var(--palette-orange)] hover:bg-[var(--palette-orange)] hover:text-[var(--palette-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--palette-paper)] motion-reduce:transition-none"
               aria-label="Facebook"
               href="https://www.facebook.com/"
               rel="noreferrer"

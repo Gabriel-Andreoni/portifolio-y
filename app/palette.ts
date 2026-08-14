@@ -5,7 +5,7 @@ export const portfolioPalette = {
   ink: "#0f0f0f",
   orange: "#ff9900",
   paper: "#ffffff",
-  purple: "#5a005d",
+  torii: "#c84224",
 } as const;
 
 type PaletteVariables = CSSProperties &
@@ -14,7 +14,7 @@ type PaletteVariables = CSSProperties &
     | "--palette-ink"
     | "--palette-orange"
     | "--palette-paper"
-    | "--palette-purple",
+    | "--palette-torii",
     string
   >;
 
@@ -23,5 +23,5 @@ export const portfolioPaletteVariables: PaletteVariables = {
   "--palette-ink": portfolioPalette.ink,
   "--palette-orange": portfolioPalette.orange,
   "--palette-paper": portfolioPalette.paper,
-  "--palette-purple": portfolioPalette.purple,
+  "--palette-torii": portfolioPalette.torii,
 };

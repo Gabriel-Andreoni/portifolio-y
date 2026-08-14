@@ -25,7 +25,7 @@ const menuLinks = [
     japanese: "連絡",
     label: "Contato",
     panel:
-      "bg-[var(--palette-purple)] text-[var(--palette-paper)] lg:[grid-area:2/1/3/8]",
+      "bg-[var(--palette-torii)] text-[var(--palette-paper)] lg:[grid-area:2/1/3/8]",
   },
 ] as const;
 
