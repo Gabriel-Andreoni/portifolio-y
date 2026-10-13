@@ -62,11 +62,6 @@ export default function Hero() {
             priority
             src={logoY}
           />
-          <p className="absolute right-3.5 bottom-3 m-0 text-right font-[family-name:var(--font-utility)] text-[clamp(0.55rem,0.75vw,0.72rem)] leading-[1.2] font-semibold tracking-[0.12em] text-[color-mix(in_srgb,var(--palette-paper)_70%,transparent)] uppercase">
-            Fotografia de
-            <br />
-            cultura japonesa
-          </p>
         </div>
 
         <header className="relative flex min-w-0 [grid-area:1/4/3/8] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-paper)] p-[clamp(1rem,1.5vw,1.5rem)] text-[var(--palette-ink)] max-lg:min-h-84 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-88">
