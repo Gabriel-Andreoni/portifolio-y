@@ -102,7 +102,7 @@ export default function Hero() {
         />
 
         <aside
-          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-torii)] bg-[linear-gradient(125deg,transparent_50%,color-mix(in_srgb,var(--palette-orange)_12%,transparent))] p-[clamp(1rem,1.5vw,1.45rem)] text-[var(--palette-paper)] max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
+          className="relative flex min-w-0 [grid-area:7/1/9/4] flex-col justify-between overflow-hidden rounded-[clamp(0.55rem,0.8vw,0.85rem)] border border-[color-mix(in_srgb,var(--palette-paper)_20%,transparent)] bg-[var(--palette-orange)] bg-[linear-gradient(125deg,transparent_50%,color-mix(in_srgb,var(--palette-orange)_12%,transparent))] p-[clamp(1rem,1.5vw,1.45rem)] text-[var(--palette-paper)] max-lg:min-h-60 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto]"
           id="contato"
         >
           <p className="m-0 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.7vw,0.72rem)] font-semibold tracking-[0.14em] uppercase">
