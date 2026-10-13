@@ -69,7 +69,7 @@ export default function Hero() {
             Um encontro · Um instante
           </p>
           <h1
-            className="relative z-[1] m-0 max-w-[22ch] font-[family-name:var(--font-display)] text-[clamp(1.4rem,1.9vw,2rem)] leading-[0.98] tracking-[-0.045em] uppercase max-lg:text-[clamp(2.15rem,7vw,3.5rem)]"
+            className="relative z-[1] m-0 max-w-[23ch] font-[family-name:var(--font-display)] text-[clamp(1.25rem,1.7vw,1.8rem)] leading-[0.98] tracking-[-0.04em] uppercase max-lg:text-[clamp(1.95rem,6.4vw,3.15rem)]"
             id="hero-title"
           >
             Histórias que acontecem uma só vez, preservadas em luz, movimento e
