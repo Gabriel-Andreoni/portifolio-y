@@ -9,11 +9,8 @@ type PhotoTileProps = {
   alt: string;
   caption?: string;
   className: string;
-  japanese: string;
-  label: string;
   position?: string;
   priority?: boolean;
-  romanized: string;
   src: string;
 };
 
@@ -21,11 +18,8 @@ function PhotoTile({
   alt,
   caption,
   className,
-  japanese,
-  label,
   position = "center",
   priority = false,
-  romanized,
   src,
 }: PhotoTileProps) {
   return (
@@ -44,20 +38,7 @@ function PhotoTile({
       <figcaption className="absolute right-[clamp(0.8rem,1.1vw,1.1rem)] bottom-[clamp(0.75rem,1vw,1rem)] left-[clamp(0.8rem,1.1vw,1.1rem)] z-[2] flex items-end justify-between gap-3 font-[family-name:var(--font-utility)] text-[clamp(0.58rem,0.72vw,0.72rem)] font-semibold tracking-[0.15em] uppercase">
         {caption ? (
           <span className="text-[var(--palette-paper)]">{caption}</span>
-        ) : (
-          <>
-            <span className="font-[family-name:var(--font-display)] text-[clamp(0.78rem,0.95vw,0.98rem)] font-normal tracking-[0.04em] text-[var(--palette-orange)] normal-case">
-              <span
-                className="font-[family-name:var(--font-japanese)]"
-                lang="ja"
-              >
-                {japanese}
-              </span>{" "}
-              · {romanized}
-            </span>
-            <span>{label}</span>
-          </>
-        )}
+        ) : null}
       </figcaption>
     </figure>
   );
@@ -105,11 +86,8 @@ export default function Hero() {
           alt="Artista de dança tradicional japonesa sob luz cênica"
           caption="Foto Gueixa - Kawasuji Fest - 2024"
           className="[grid-area:1/8/6/13] max-lg:min-h-[min(36rem,78svh)] max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-124"
-          japanese="舞"
-          label="movimento"
           position="54% center"
           priority
-          romanized="Mai"
           src="/5.jpeg"
         />
 
@@ -117,20 +95,14 @@ export default function Hero() {
           alt="Taikoísta tocando durante uma apresentação"
           caption={'Foto "Kodô" - Kawasuji Fest - 2024'}
           className="[grid-area:3/1/7/4] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
-          japanese="鼓動"
-          label="pulso"
           position="44% center"
-          romanized="Kodō"
           src="/3.jpeg"
         />
 
         <PhotoTile
           alt="Músico concentrado diante de tambores taiko"
           className="[grid-area:3/4/6/8] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
-          japanese="力"
-          label="força"
           position="72% center"
-          romanized="Chikara"
           src="/2.jpeg"
         />
 
@@ -175,10 +147,7 @@ export default function Hero() {
         <PhotoTile
           alt="Grupo de taiko em apresentação coletiva"
           className="[grid-area:6/8/9/11] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
-          japanese="和"
-          label="coletivo"
           position="center 72%"
-          romanized="Wa"
           src="/1.jpeg"
         />
 
@@ -186,20 +155,14 @@ export default function Hero() {
           alt="Artistas mascarados em uma apresentação cultural"
           caption="Foto Máscaras - Festival do Japão de Sumaré - 2024"
           className="[grid-area:6/11/9/13] max-lg:min-h-96 max-lg:[grid-column:auto] max-lg:[grid-row:auto] max-sm:min-h-76"
-          japanese="祭"
-          label="celebração"
           position="center 32%"
-          romanized="Matsuri"
           src="/6.jpeg"
         />
 
         <PhotoTile
           alt="Mãos e baquetas em detalhe sobre um tambor taiko"
           className="[grid-area:6/4/9/8] max-lg:min-h-80 max-lg:[grid-column:1/-1] max-lg:[grid-row:auto] max-sm:min-h-68"
-          japanese="響"
-          label="detalhe"
           position="54% center"
-          romanized="Hibiki"
           src="/4.jpeg"
         />
       </div>
